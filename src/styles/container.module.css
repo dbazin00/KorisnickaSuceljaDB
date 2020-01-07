@@ -1,0 +1,27 @@
+.container {
+  margin: 50px 15%;
+  margin-top: 0;
+  background-color: black;
+  border: solid white;
+  padding: 15px;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 125px;
+  border: solid white;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 15px;
+  margin-bottom: 0%;
+  border-bottom: none;
+}
+
+span {
+  vertical-align: middle;
+}

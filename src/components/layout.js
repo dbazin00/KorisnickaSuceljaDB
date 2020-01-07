@@ -3,8 +3,13 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import styles from "../styles/container.module.css"
+// import { setConfig } from 'react-hot-loader'
 
-const Layout = (props) => {
+// setConfig({
+//     showReactDomPatchNotification: false
+// })
+const Layout = props => {
   const data = useStaticQuery(
     graphql`
       query MyQuery {
@@ -19,12 +24,19 @@ const Layout = (props) => {
       }
     `
   )
-
-  // console.log(data)
-  return (<div>
-      <Header menuItems={data.site.siteMetadata.menuItems} />
-      {props.children}
-      <Footer/></div>
+  return (
+    <div>
+      <Header
+        menuItems={data.site.siteMetadata.menuItems}
+        activePage={props.activePage}
+      />
+      <div id="contentRef"></div>
+      <h1 className={styles.content} id="content">
+        {props.header}
+      </h1>
+      <div className={styles.container}>{props.children}</div>
+      <Footer />
+    </div>
   )
 }
 

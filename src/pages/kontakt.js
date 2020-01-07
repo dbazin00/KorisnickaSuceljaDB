@@ -2,8 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Container, Row, Col } from "react-bootstrap"
-import styles from "../styles/style.module.css"
+import { Container, Table } from "react-bootstrap"
 
 const Kontakt = () => {
   const contactItems = [
@@ -31,32 +30,25 @@ const Kontakt = () => {
   return (
     <div>
       <SEO title="Kontakt" keywords="Kontakt" />
-      <Layout>
-        {/* <Table striped bordered hover>
-  <thead>
-          <th>Možete me kontaktirati preko:</th>
-  </thead>
-  <tbody>
-    {contactItems.map(item=>
-          <tr>
-<td><span className="material-icons">{item.icon}</span> {item.label}</td>
-    <td>{item.text}</td>
-        </tr>
-      )}
-  </tbody>
-</Table> */}
-       <br/> <Container>
-          <Col>
-            <h1>Možete me kontaktirati na sljedeće načine:</h1>
-          </Col><br/>
-          {contactItems.map(item => (
-            <Row key={item.label}>
-              <Col>
-                <span className="material-icons"><div className={styles.icon}>{item.icon}</div></span> {item.label}
-              </Col>
-              <Col>{item.text}</Col>
-            </Row>
-          ))}
+      <Layout header={"Kontakt"} activePage={"/kontakt"}>
+        <br />
+        <Container>
+          <br />
+          <Table responsive striped bordered hover variant="dark">
+            
+              {contactItems.map(item => (
+              <tbody key={item.text}>
+                <tr>
+                  <td><span className="material-icons">{item.icon}</span>
+                    <b>{item.label}</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{item.text}</td>
+                </tr></tbody>
+              ))}
+            
+          </Table>
         </Container>
       </Layout>
     </div>

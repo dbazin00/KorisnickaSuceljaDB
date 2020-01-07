@@ -1,0 +1,42 @@
+.Background {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image: url(../images/backgroundImage.jpg); /*http://bit.ly/2gPLxZ4*/
+  width: 100%;
+  height: 100vh;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Profile img {
+  border-radius: 100%;
+}
+.Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 180px;
+}
+.Profile h1 {
+  color: white;
+}
+
+.Link {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.Link:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.Navigation {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: +1;
+}

@@ -1,0 +1,39 @@
+import React from "react"
+import { graphql } from "gatsby"
+import { Link } from "gatsby"
+import SEO from "../components/seo"
+
+import Layout from "../components/layout"
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        date
+      }
+      html
+    }
+  }
+`
+
+const Blog = props => {
+  return (
+    <div>
+      <SEO title={props.data.markdownRemark.frontmatter.title} />
+      <Layout header={props.data.markdownRemark.frontmatter.title}>
+        <p style={{ textAlign: "right" }}>
+          {props.data.markdownRemark.frontmatter.date}
+        </p>
+        <div
+          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+        ></div>
+        <Link to="/blog">
+          <span className="material-icons">arrow_back</span>Natrag na blog
+        </Link>
+      </Layout>
+    </div>
+  )
+}
+
+export default Blog
