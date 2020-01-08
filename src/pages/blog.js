@@ -33,8 +33,8 @@ const BlogPage = () => {
         {data.allMarkdownRemark.edges.map(edge => {
           return (
             <Card
-              bg="dark"
-              style={{ margin: "15px" }}
+              // bg="dark"
+              style={{ margin: "15px", backgroundColor: "#222222"}}
               key={edge.node.fields.slug}
             >
               <Card.Body>

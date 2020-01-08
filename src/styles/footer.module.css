@@ -1,8 +1,7 @@
 .Footer {
-  border: solid white;
+  border-top: solid grey;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
 }

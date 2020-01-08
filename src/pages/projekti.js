@@ -44,7 +44,7 @@ const Projekti = () => {
       <SEO title="Projekti" keywords="Projekti" />
       <Layout header={"Projekti"} activePage={"/projekti"}>
         {projectArray.map(item => (
-          <Card bg="dark" style={{ margin: "15px" }} key={item.repository}>
+          <Card style={{ margin: "15px", backgroundColor: "#222222"}} key={item.repository}>
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
