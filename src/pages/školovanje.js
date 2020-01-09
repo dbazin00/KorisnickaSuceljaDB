@@ -48,7 +48,7 @@ const Skolovanje = () => {
         <div className={styles.cardGroup}>
           {schoolArray.map(item => (
             <Card
-              style={{ width: "15rem", margin: "5px", backgroundColor: "#222222"}}
+              style={{ width: "15rem", marginRight: "15px", marginTop:"50px", backgroundColor: "#222222"}}
               key={item.name}
             >
               <Card.Img src={item.picture} height="150px" />

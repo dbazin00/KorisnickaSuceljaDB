@@ -1,0 +1,7 @@
+.Card1{
+    margin: 15px;
+    background-color: #222222;
+}
+.Card1:hover{
+    background-color: #333333;
+}

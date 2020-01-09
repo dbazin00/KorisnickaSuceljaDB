@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import { Card } from "react-bootstrap"
 
 import Layout from "../components/layout"
+import styles  from "../styles/blog.module.css"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -33,17 +34,22 @@ const BlogPage = () => {
         {data.allMarkdownRemark.edges.map(edge => {
           return (
             <Card
-              // bg="dark"
-              style={{ margin: "15px", backgroundColor: "#222222"}}
+              // style={{ margin: "15px", backgroundColor: "#222222" } }
               key={edge.node.fields.slug}
+              className={styles.Card1}
             >
               <Card.Body>
-                <Card.Title>{edge.node.frontmatter.title}</Card.Title>
+                <Card.Title style={{fontSize: "1.75rem"}}>
+                  {edge.node.frontmatter.title}
+                </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   {edge.node.frontmatter.date}
                 </Card.Subtitle>
                 <Card.Text>{edge.node.frontmatter.description}</Card.Text>
-                <Card.Link href={`/blog/${edge.node.fields.slug}`}>
+                <Card.Link
+                  href={`/blog/${edge.node.fields.slug}`}
+                  className="stretched-link"
+                >
                   Vidi više...
                   <span className="material-icons">arrow_forward</span>
                 </Card.Link>
