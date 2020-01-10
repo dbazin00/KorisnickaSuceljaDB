@@ -18,12 +18,16 @@ export const query = graphql`
 `
 
 const Blog = props => {
+  const getFormattedDate = datum => {
+    var getMonth = datum.getMonth() + 1
+    return (datum.getDate() + ". " + getMonth + ". " + datum.getFullYear() + ".")
+  }
   return (
     <div>
       <SEO title={props.data.markdownRemark.frontmatter.title} />
       <Layout header={props.data.markdownRemark.frontmatter.title}>
         <p style={{ textAlign: "right" }}>
-          {props.data.markdownRemark.frontmatter.date}
+          {getFormattedDate(new Date(props.data.markdownRemark.frontmatter.date))}
         </p>
         <div
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}

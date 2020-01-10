@@ -1,6 +1,6 @@
 ---
 title: "Java"
-date: "16. 10. 2018."
+date: "2018-10-16"
 description: "Programski jezik Java"
 ---
 

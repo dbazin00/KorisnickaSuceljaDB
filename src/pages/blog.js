@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import { Card } from "react-bootstrap"
 
 import Layout from "../components/layout"
-import styles  from "../styles/blog.module.css"
+import styles from "../styles/blog.module.css"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +26,14 @@ const BlogPage = () => {
       }
     }
   `)
-
+  const getFormattedDate = datum => {
+    var getMonth = datum.getMonth() + 1
+    return datum.getDate() + ". " + getMonth + ". " + datum.getFullYear() + "."
+  }
+  console.log(data.allMarkdownRemark.edges)
+  data.allMarkdownRemark.edges.sort((edge1, edge2)=>{
+    return edge1.node.frontmatter.date < edge2.node.frontmatter.date ? 1: -1
+  })
   return (
     <div>
       <SEO title="Blog" keywords="Blog" />
@@ -39,11 +46,11 @@ const BlogPage = () => {
               className={styles.Card1}
             >
               <Card.Body>
-                <Card.Title style={{fontSize: "1.75rem"}}>
+                <Card.Title style={{ fontSize: "1.75rem" }}>
                   {edge.node.frontmatter.title}
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  {edge.node.frontmatter.date}
+                  {getFormattedDate(new Date(edge.node.frontmatter.date))}
                 </Card.Subtitle>
                 <Card.Text>{edge.node.frontmatter.description}</Card.Text>
                 <Card.Link

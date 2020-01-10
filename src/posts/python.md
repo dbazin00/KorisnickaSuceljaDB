@@ -1,6 +1,6 @@
 ---
 title: "Python"
-date: "7. 4. 2018."
+date: "2018-04-07"
 description: "Programski jezik Python"
 ---
 

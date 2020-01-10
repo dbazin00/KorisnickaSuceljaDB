@@ -1,6 +1,6 @@
 ---
 title: "UNIX"
-date: "7. 8. 2017."
+date: "2017-08-07"
 description: "Operacijski sustav UNIX"
 ---
 

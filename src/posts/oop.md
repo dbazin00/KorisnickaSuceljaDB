@@ -1,6 +1,6 @@
 ---
 title: "Objektno orijentirano programiranje"
-date: "23. 5. 2018."
+date: "2018-05-23"
 description: "Koncept objektno orijentiranog programiranja"
 ---
 

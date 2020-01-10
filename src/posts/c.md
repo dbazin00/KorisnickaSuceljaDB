@@ -1,6 +1,6 @@
 ---
 title: "C"
-date: "17. 9. 2018."
+date: "2018-09-17"
 description: "Programski jezik C"
 ---
 

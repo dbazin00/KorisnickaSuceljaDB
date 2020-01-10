@@ -1,6 +1,6 @@
 ---
 title: "JavaScript"
-date: "8. 10. 2016."
+date: "2016-10-08"
 description: "Programski jezik JavaScript"
 ---
 
