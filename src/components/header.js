@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { Button } from "react-bootstrap"
+import BackgroundImage from 'gatsby-background-image'
 
 import styles from "../styles/header.module.css"
 import Navigation from "../components/navigation"
@@ -24,12 +25,19 @@ const Header = ({ menuItems, activePage }) => {
           }
         }
       }
+      backgroundImage: file(relativePath: { eq: "backgroundImage.jpg" }) {
+        childImageSharp {
+          fixed{
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
   if (activePage === "/") {
     return (
-      <div className={styles.Background}>
+      <BackgroundImage fluid={data.backgroundImage.childImageSharp.fixed} className={styles.Background}>
         <Navigation
           menuItems={menuItems}
           activePage={activePage}
@@ -43,7 +51,7 @@ const Header = ({ menuItems, activePage }) => {
             <span className="material-icons">arrow_downward</span>
           </Button>
         </div>
-      </div>
+      </BackgroundImage>
     )
   } else {
     return (

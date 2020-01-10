@@ -23,7 +23,7 @@ const IndexPage = () => {
     <div>
       <SEO title="Početna" keywords="Početna" />
       <Layout header={"Davor Bazina"} activePage={"/"}>
-        <h4>{data.site.siteMetadata.description}</h4>
+        <h5>{data.site.siteMetadata.description}</h5>
         <div className={styles.cardGroup}>
           <Card style={{ width: "18rem", margin: "5px" }} bg="primary">
             <Card.Body>

@@ -1,9 +1,9 @@
 .cardGroup {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.cardGroup Card {
-  margin-top: 5px;
+h5 {
+  padding-bottom: 15px;
+  line-height: 30px;
 }
