@@ -7,3 +7,20 @@ h5 {
   padding-bottom: 15px;
   line-height: 30px;
 }
+
+.Link {
+  color: white;
+}
+
+.Link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.Card1{
+  background-color: #0000BF;
+}
+
+.Card1:hover{
+  background-color: #0000FF;
+}

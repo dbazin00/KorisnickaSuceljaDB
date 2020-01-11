@@ -5,3 +5,12 @@
 .Card1:hover{
     background-color: #333333;
 }
+
+.Link {
+    color: white;
+}
+
+.Link:hover {
+    color: white;
+    text-decoration: none;
+}

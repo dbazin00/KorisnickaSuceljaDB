@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { Button } from "react-bootstrap"
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from "gatsby-background-image"
 
 import styles from "../styles/header.module.css"
 import Navigation from "../components/navigation"
@@ -27,8 +27,8 @@ const Header = ({ menuItems, activePage }) => {
       }
       backgroundImage: file(relativePath: { eq: "backgroundImage.jpg" }) {
         childImageSharp {
-          fixed{
-            ...GatsbyImageSharpFixed
+          fluid(quality: 90, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -37,30 +37,35 @@ const Header = ({ menuItems, activePage }) => {
 
   if (activePage === "/") {
     return (
-      <BackgroundImage fluid={data.backgroundImage.childImageSharp.fixed} className={styles.Background}>
+      <div>
         <Navigation
           menuItems={menuItems}
           activePage={activePage}
           logo={data.logo.childImageSharp.fixed}
         />
-        <div className={styles.Profile}>
-          <Img fixed={data.profile.childImageSharp.fixed} />
-          <h1>Davor Bazina</h1>
-          <Button variant="dark" href="#contentRef">
-            <span className="material-icons">arrow_downward</span>Vidi više...
-            <span className="material-icons">arrow_downward</span>
-          </Button>
-        </div>
-      </BackgroundImage>
+        <BackgroundImage
+          fluid={data.backgroundImage.childImageSharp.fluid}
+          className={styles.Background}
+        >
+          <div className={styles.Profile}>
+            <Img fixed={data.profile.childImageSharp.fixed} />
+            <h1>Davor Bazina</h1>
+            <Button variant="dark" href="#contentRef">
+              <span className="material-icons">arrow_downward</span>Vidi više...
+              <span className="material-icons">arrow_downward</span>
+            </Button>
+          </div>
+        </BackgroundImage>
+      </div>
     )
   } else {
     return (
       <div>
-      <Navigation
-        menuItems={menuItems}
-        activePage={activePage}
-        logo={data.logo.childImageSharp.fixed}
-      />
+        <Navigation
+          menuItems={menuItems}
+          activePage={activePage}
+          logo={data.logo.childImageSharp.fixed}
+        />
       </div>
     )
   }

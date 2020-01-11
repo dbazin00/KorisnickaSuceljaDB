@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import { Card } from "react-bootstrap"
 
@@ -19,55 +19,45 @@ const IndexPage = () => {
       }
     `
   )
+
+  const cardArray = [
+    {
+      path: "/blog",
+      title: "Blog",
+      text: "Na ovoj stranici možete vidjeti moj blog.",
+    },
+    {
+      path: "/znanje",
+      title: "Znanje",
+      text: "Na ovoj stranici možete vidjeti moje znanje i vještine..",
+    },
+    {
+      path: "/kontakt",
+      title: "Kontakt",
+      text: "Na ovoj stranici možete dobiti upute kako me možete kontaktirati.",
+    }
+  ]
+
   return (
     <div>
       <SEO title="Početna" keywords="Početna" />
       <Layout header={"Davor Bazina"} activePage={"/"}>
         <h5>{data.site.siteMetadata.description}</h5>
         <div className={styles.cardGroup}>
-          <Card style={{ width: "18rem", margin: "5px" }} bg="primary">
-            <Card.Body>
-              <Card.Title>Blog</Card.Title>
-              <Card.Text>Na ovoj stranici možete vidjeti moj blog.</Card.Text>
-              <Card.Link href="/blog" variant="dark" style={{ color: "black" }}>
+          {cardArray.map(card =>
+          <Link to={card.path}className={styles.Link} key={card.path}>
+            <Card style={{ width: "20rem", margin: "5px" }} className={styles.Card1}>
+              <Card.Body>
+                <Card.Title>{card.title}</Card.Title>
+                <Card.Text>{card.text}</Card.Text>
+              </Card.Body>
+              <Card.Footer style={{ color: "black" }}>
                 Vidi više...
                 <span className="material-icons">arrow_forward</span>
-              </Card.Link>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: "18rem", margin: "5px" }} bg="primary">
-            <Card.Body>
-              <Card.Title>Znanje</Card.Title>
-              <Card.Text>
-                Na ovoj stranici možete vidjeti moje znanje i vještine.
-              </Card.Text>
-              <Card.Link
-                href="/znanje"
-                variant="dark"
-                style={{ color: "black" }}
-              >
-                Vidi više...
-                <span className="material-icons">arrow_forward</span>
-              </Card.Link>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: "18rem", margin: "5px" }} bg="primary">
-            <Card.Body>
-              <Card.Title>Kontakt</Card.Title>
-              <Card.Text>
-                Na ovoj stranici možete dobiti upute kako me možete
-                kontaktirati.
-              </Card.Text>
-              <Card.Link
-                href="/kontakt"
-                variant="dark"
-                style={{ color: "black" }}
-              >
-                Vidi više...
-                <span className="material-icons">arrow_forward</span>
-              </Card.Link>
-            </Card.Body>
-          </Card>
+              </Card.Footer>
+            </Card>
+          </Link>
+          )}
         </div>
       </Layout>
     </div>

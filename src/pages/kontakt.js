@@ -2,8 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Container, Table } from "react-bootstrap"
-
 const Kontakt = () => {
   const contactItems = [
     {
@@ -31,25 +29,9 @@ const Kontakt = () => {
     <div>
       <SEO title="Kontakt" keywords="Kontakt" />
       <Layout header={"Kontakt"} activePage={"/kontakt"}>
-        <br />
-        <Container>
-          <br />
-          <Table responsive striped bordered hover variant="dark">
-            
-              {contactItems.map(item => (
-              <tbody key={item.text}>
-                <tr>
-                  <td><span className="material-icons">{item.icon}</span>
-                    <b>{item.label}</b>
-                  </td>
-                </tr>
-                <tr>
-                  <td>{item.text}</td>
-                </tr></tbody>
-              ))}
-            
-          </Table>
-        </Container>
+          {contactItems.map(item =>
+          <div style={{marginTop:"25px"}}><span className="material-icons">{item.icon}</span> {item.text}</div>
+            )}
       </Layout>
     </div>
   )
