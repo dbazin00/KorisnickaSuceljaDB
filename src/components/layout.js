@@ -4,11 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import styles from "../styles/container.module.css"
-// import { setConfig } from 'react-hot-loader'
 
-// setConfig({
-//     showReactDomPatchNotification: false
-// })
 const Layout = props => {
   const data = useStaticQuery(
     graphql`

@@ -17,10 +17,10 @@ h5 {
   text-decoration: none;
 }
 
-.Card1{
-  background-color: #0000BF;
+.Card1 {
+  background-color: #0000bf;
 }
 
-.Card1:hover{
-  background-color: #0000FF;
+.Card1:hover {
+  background-color: #0000ff;
 }

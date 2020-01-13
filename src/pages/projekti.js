@@ -9,7 +9,8 @@ const Projekti = () => {
     {
       name: "Osobna stranica",
       technologies: "Gatsby, React, Javascript, GraphQL",
-      description: "Seminarski rad kolegija Korisnička sučelja. Korištenjem Gatsby Frameworka i GraphQL-a napravljena je osobna stranica.",
+      description:
+        "Seminarski rad kolegija Korisnička sučelja. Korištenjem Gatsby Frameworka i GraphQL-a napravljena je osobna stranica.",
       repository: "https://github.com/dbazin00/KorisnickaSuceljaDB",
       startDate: "listopad 2019.",
       endDate: "siječanj 2020.",
@@ -17,7 +18,8 @@ const Projekti = () => {
     {
       name: "Snake",
       technologies: "Pygame, Python",
-      description: "Seminarski rad kolegija Računalna grafika. Pomoću Pygame seta modula i programskog jezika Python napravljena je dvodimenzionalna igra Snake",
+      description:
+        "Seminarski rad kolegija Računalna grafika. Pomoću Pygame seta modula i programskog jezika Python napravljena je dvodimenzionalna igra Snake",
       repository: "https://github.com/dbazin00/Snake",
       startDate: "prosinac 2019.",
       endDate: "siječanj 2020.",
@@ -25,15 +27,18 @@ const Projekti = () => {
     {
       name: "Završni rad",
       technologies: "Grails, Groovy, Java, PostgreSQL",
-      description: "Aplikacija za interakciju dva fizički udaljena korisnika. Projekt je napravljen kao dio završnog rada ",
+      description:
+        "Aplikacija za interakciju dva fizički udaljena korisnika. Projekt je napravljen kao dio završnog rada ",
       repository: "https://github.com/dbazin00/Zavrsni",
       startDate: "ožujak 2018.",
       endDate: "srpanj 2018.",
     },
     {
       name: "BDhub",
-      technologies: "ASP .Net MVC, C#, Angular, MS SQL, Blockchain, Network request/response",
-      description: "U sklopu stručne prakse napravljen je projekt koji omogućava plaćanje gledanja videa  korištenjem BLockchain tehnologije",
+      technologies:
+        "ASP .Net MVC, C#, Angular, MS SQL, Blockchain, Network request/response",
+      description:
+        "U sklopu stručne prakse napravljen je projekt koji omogućava plaćanje gledanja videa  korištenjem BLockchain tehnologije",
       repository: "https://github.com/dbazin00/BDhub",
       startDate: "travanj 2018.",
       endDate: "srpanj 2018.",
@@ -44,9 +49,14 @@ const Projekti = () => {
       <SEO title="Projekti" keywords="Projekti" />
       <Layout header={"Projekti"} activePage={"/projekti"}>
         {projectArray.map(item => (
-          <Card style={{ margin: "15px", backgroundColor: "#222222"}} key={item.repository}>
+          <Card
+            style={{ margin: "15px", backgroundColor: "#222222" }}
+            key={item.repository}
+          >
             <Card.Body>
-              <Card.Title style={{fontSize:"1.75rem"}}>{item.name}</Card.Title>
+              <Card.Title style={{ fontSize: "1.75rem" }}>
+                {item.name}
+              </Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
                 {item.technologies}
               </Card.Subtitle>

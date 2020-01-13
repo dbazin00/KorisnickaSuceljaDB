@@ -29,9 +29,11 @@ const Kontakt = () => {
     <div>
       <SEO title="Kontakt" keywords="Kontakt" />
       <Layout header={"Kontakt"} activePage={"/kontakt"}>
-          {contactItems.map(item =>
-          <div style={{marginTop:"25px"}}><span className="material-icons">{item.icon}</span> {item.text}</div>
-            )}
+        {contactItems.map(item => (
+          <div style={{ marginTop: "25px" }}>
+            <span className="material-icons">{item.icon}</span> {item.text}
+          </div>
+        ))}
       </Layout>
     </div>
   )

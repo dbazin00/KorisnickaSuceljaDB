@@ -1,16 +1,16 @@
-.Card1{
-    margin-top: 15px;
-    background-color: #222222;
+.Card1 {
+  margin-top: 15px;
+  background-color: #222222;
 }
-.Card1:hover{
-    background-color: #333333;
+.Card1:hover {
+  background-color: #333333;
 }
 
 .Link {
-    color: white;
+  color: white;
 }
 
 .Link:hover {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }

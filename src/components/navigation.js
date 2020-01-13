@@ -6,8 +6,8 @@ import { Nav, Navbar } from "react-bootstrap"
 
 import styles from "../styles/header.module.css"
 
-const Navigation = ({ menuItems, activePage, logo }) =>{
-    var indexHome = 0,
+const Navigation = ({ menuItems, activePage, logo }) => {
+  var indexHome = 0,
     indexContact = 0,
     i = 0
 
@@ -40,37 +40,36 @@ const Navigation = ({ menuItems, activePage, logo }) =>{
   menuItems[indexContact] = menuItems[menuItems.length - 1]
   menuItems[menuItems.length - 1] = tempContact
 
-    return(
-        <div className={styles.Navigation}>
-        <Navbar expand="lg" variant="dark">
-          <Navbar.Brand>
-            <Link to="/">
-              <Img fixed={logo} />
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              {menuItems.map(menuLink => (
-                <div className={styles.Link} key={menuLink.path}>
-                  <Nav.Link href={menuLink.path}>
-                    <div
-                      className={styles.Link}
-                      style={
-                        menuLink.path === activePage ? { color: "white" } : {}
-                      }
-                    >
-                      {menuLink.text}
-                    </div>
-                  </Nav.Link>
-                </div>
-              ))}
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
-    )
+  return (
+    <div className={styles.Navigation}>
+      <Navbar expand="lg" variant="dark">
+        <Navbar.Brand>
+          <Link to="/">
+            <Img fixed={logo} />
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            {menuItems.map(menuLink => (
+              <div className={styles.Link} key={menuLink.path}>
+                <Nav.Link href={menuLink.path}>
+                  <div
+                    className={styles.Link}
+                    style={
+                      menuLink.path === activePage ? { color: "white" } : {}
+                    }
+                  >
+                    {menuLink.text}
+                  </div>
+                </Nav.Link>
+              </div>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
+  )
 }
-
 
 export default Navigation
