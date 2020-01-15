@@ -151,15 +151,21 @@ const Znanje = () => {
     <Card
       style={{
         width: "15rem",
-        height: "15rem",
+        height: "auto",
         marginRight: "15px",
         marginTop: "50px",
         backgroundColor: "#222222",
       }}
       key={item.name}
     >
-      <Card.Img src={item.picture} height="150px" />
-      <Card.Body>
+      <Card.Img src={item.picture} height="auto" />
+      <Card.Body
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+        }}
+      >
         <Card.Title>{item.name}</Card.Title>
         <Card.Subtitle>{item.category}</Card.Subtitle>
       </Card.Body>
@@ -187,7 +193,7 @@ const Znanje = () => {
     <div>
       <SEO title="Znanje" keywords="Znanje" />
       <Layout header={"Znanje"} activePage={"/znanje"}>
-        <DropdownButton id="dropdown-basic-button" title="Pretraži listu...">
+        <DropdownButton id="dropdown-basic-button" title="Filtriraj listu">
           <Form style={{ margin: "15px" }}>
             {["checkbox"].map(type => (
               <div key={`custom-${type}`} className="mb-3">

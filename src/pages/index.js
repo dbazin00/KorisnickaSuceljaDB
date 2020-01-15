@@ -54,7 +54,7 @@ const IndexPage = () => {
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.text}</Card.Text>
                 </Card.Body>
-                <Card.Footer style={{ color: "black" }}>
+                <Card.Footer style={{ color: "white" }}>
                   Vidi više...
                   <span className="material-icons">arrow_forward</span>
                 </Card.Footer>

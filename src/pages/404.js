@@ -18,14 +18,19 @@ const NotFound = () => {
   `)
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "30px",
+      }}
     >
       <SEO title="404" keywords="Znanje" />
       <div>
         <Img fixed={data.logo.childImageSharp.fixed} />
       </div>
       <div>
-        <h1>
+        <h1 style={{ textAlign: "center" }}>
           Stranica nije pronađena...
           <span className="material-icons">
             <h1>sentiment_very_dissatisfied</h1>
