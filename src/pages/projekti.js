@@ -50,7 +50,7 @@ const Projekti = () => {
       <Layout header={"Projekti"} activePage={"/projekti"}>
         {projectArray.map(item => (
           <Card
-            style={{ margin: "15px", backgroundColor: "#222222" }}
+            style={{ margin: "15px", backgroundColor: "#222222", marginLeft: "0" }}
             key={item.repository}
           >
             <Card.Body>
