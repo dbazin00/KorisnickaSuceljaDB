@@ -34,7 +34,7 @@ const menuItems = files.map(file => {
 module.exports = {
   siteMetadata: {
     title: `DB`,
-    description: `Dobrošli na moju osobnu stranicu! Na ovoj stranici možete saznati sve o podatke o meni - školovanje, znanje i vještine te projekti na kojima sam radio do sada. Ukoliko me želite kontaktirati, to također možete napraviti na ovoj stranici.`,
+    description: `Dobrošli na moju osobnu stranicu! Na ovoj stranici možete saznati sve podatke o meni - školovanje, znanje i vještine te projekti na kojima sam radio do sada. Ukoliko me želite kontaktirati, to također možete napraviti na ovoj stranici.`,
     menuItems,
     author: `DB`,
   },
