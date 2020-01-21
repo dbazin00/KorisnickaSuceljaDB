@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
+import moment from "moment"
 
 import { Card } from "react-bootstrap"
 
@@ -27,11 +28,7 @@ const BlogPage = () => {
       }
     }
   `)
-  const getFormattedDate = datum => {
-    var getMonth = datum.getMonth() + 1
-    return datum.getDate() + ". " + getMonth + ". " + datum.getFullYear() + "."
-  }
-  console.log(data.allMarkdownRemark.edges)
+
   data.allMarkdownRemark.edges.sort((edge1, edge2) => {
     return edge1.node.frontmatter.date < edge2.node.frontmatter.date ? 1 : -1
   })
@@ -52,7 +49,7 @@ const BlogPage = () => {
                     {edge.node.frontmatter.title}
                   </Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
-                    {getFormattedDate(new Date(edge.node.frontmatter.date))}
+                    {moment(new Date(edge.node.frontmatter.date)).format("D. M. Y.")}
                   </Card.Subtitle>
                   <Card.Text>{edge.node.frontmatter.description}</Card.Text>
                 </Card.Body>
