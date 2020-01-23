@@ -28,7 +28,7 @@ h5 {
   background-color: #0000ff;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 540px) {
   .Card1 {
     margin-right: 0;
     margin-left: 0;
