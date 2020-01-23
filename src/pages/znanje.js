@@ -193,7 +193,11 @@ const Znanje = () => {
     <div>
       <SEO title="Znanje" keywords="Znanje" />
       <Layout header={"Znanje"} activePage={"/znanje"}>
-        <DropdownButton id="dropdown-basic-button" title="Filtriraj listu">
+        <DropdownButton
+          id="dropdown-basic-button"
+          title="Filtriraj listu"
+          style={{ zIndex: "1" }}
+        >
           <Form style={{ margin: "15px" }}>
             {["checkbox"].map(type => (
               <div key={`custom-${type}`} className="mb-3">

@@ -19,6 +19,26 @@ body {
   padding-top: 125px;
 }
 
+@media only screen and (max-width: 992px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 0;
+    margin-bottom: 0%;
+    padding-top: 125px;
+  }
+  .container {
+    margin: 50px 5%;
+    margin-top: 0;
+    background-color: black;
+    min-height: 60vh;
+    padding: 0;
+  }
+}
+
 span {
   vertical-align: middle;
 }

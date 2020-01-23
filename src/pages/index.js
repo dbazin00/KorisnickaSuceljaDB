@@ -46,10 +46,7 @@ const IndexPage = () => {
         <div className={styles.cardGroup}>
           {cardArray.map(card => (
             <Link to={card.path} className={styles.Link} key={card.path}>
-              <Card
-                style={{ maxWidth: "20rem", margin: "15px", marginLeft: "0" }}
-                className={styles.Card1}
-              >
+              <Card className={styles.Card1}>
                 <Card.Body>
                   <Card.Title>{card.title}</Card.Title>
                   <Card.Text>{card.text}</Card.Text>

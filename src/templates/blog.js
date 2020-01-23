@@ -22,9 +22,14 @@ const Blog = props => {
   return (
     <div>
       <SEO title={props.data.markdownRemark.frontmatter.title} />
-      <Layout header={props.data.markdownRemark.frontmatter.title}>
+      <Layout
+        header={props.data.markdownRemark.frontmatter.title}
+        activePage={"/blog"}
+      >
         <p style={{ textAlign: "right" }}>
-          {moment(new Date(props.data.markdownRemark.frontmatter.date)).format("D. M. Y.")}
+          {moment(new Date(props.data.markdownRemark.frontmatter.date)).format(
+            "D. M. Y."
+          )}
         </p>
         <div
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}

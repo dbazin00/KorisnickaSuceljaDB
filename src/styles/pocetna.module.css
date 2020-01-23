@@ -19,8 +19,18 @@ h5 {
 
 .Card1 {
   background-color: #0000bf;
+  max-width: 20rem;
+  margin: 15px;
+  margin-left: 0;
 }
 
 .Card1:hover {
   background-color: #0000ff;
+}
+
+@media only screen and (max-width: 992px) {
+  .Card1 {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }

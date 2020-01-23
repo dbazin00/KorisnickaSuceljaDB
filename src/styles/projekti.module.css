@@ -1,0 +1,11 @@
+.Card1 {
+  margin: 15px;
+  background-color: #222222;
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .Card1 {
+    margin-right: 0;
+  }
+}

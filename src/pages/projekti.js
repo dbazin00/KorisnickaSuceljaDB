@@ -4,6 +4,8 @@ import SEO from "../components/seo"
 
 import { Card } from "react-bootstrap"
 
+import styles from "../styles/projekti.module.css"
+
 const Projekti = () => {
   const projectArray = [
     {
@@ -49,10 +51,7 @@ const Projekti = () => {
       <SEO title="Projekti" keywords="Projekti" />
       <Layout header={"Projekti"} activePage={"/projekti"}>
         {projectArray.map(item => (
-          <Card
-            style={{ margin: "15px", backgroundColor: "#222222", marginLeft: "0" }}
-            key={item.repository}
-          >
+          <Card className={styles.Card1} key={item.repository}>
             <Card.Body>
               <Card.Title style={{ fontSize: "1.75rem" }}>
                 {item.name}
