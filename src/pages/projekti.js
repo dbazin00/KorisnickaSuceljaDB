@@ -40,7 +40,7 @@ const Projekti = () => {
       technologies:
         "ASP .Net MVC, C#, Angular, MS SQL, Blockchain, Network request/response",
       description:
-        "U sklopu stručne prakse napravljen je projekt koji omogućava plaćanje gledanja videa  korištenjem BLockchain tehnologije",
+        "U sklopu stručne prakse napravljen je projekt koji omogućava plaćanje gledanja videa korištenjem Blockchain tehnologije",
       repository: "https://github.com/dbazin00/BDhub",
       startDate: "travanj 2018.",
       endDate: "srpanj 2018.",

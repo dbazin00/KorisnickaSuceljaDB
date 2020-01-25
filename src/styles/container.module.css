@@ -19,7 +19,7 @@ body {
   padding-top: 125px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 530px) {
   .content {
     display: flex;
     justify-content: center;

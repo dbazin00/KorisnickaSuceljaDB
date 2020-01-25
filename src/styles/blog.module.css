@@ -1,6 +1,7 @@
 .Card1 {
   margin-top: 15px;
   background-color: #222222;
+  transition: background-color ease-in-out 0.5s;
 }
 .Card1:hover {
   background-color: #333333;

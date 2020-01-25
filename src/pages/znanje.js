@@ -148,24 +148,9 @@ const Znanje = () => {
   const [filters, setFilters] = useState([])
 
   const showFilteredArray = item => (
-    <Card
-      style={{
-        width: "15rem",
-        height: "auto",
-        marginRight: "15px",
-        marginTop: "50px",
-        backgroundColor: "#222222",
-      }}
-      key={item.name}
-    >
+    <Card className={styles.Card1} key={item.name}>
       <Card.Img src={item.picture} height="auto" />
-      <Card.Body
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-        }}
-      >
+      <Card.Body id={styles.cardBody}>
         <Card.Title>{item.name}</Card.Title>
         <Card.Subtitle>{item.category}</Card.Subtitle>
       </Card.Body>
@@ -194,9 +179,9 @@ const Znanje = () => {
       <SEO title="Znanje" keywords="Znanje" />
       <Layout header={"Znanje"} activePage={"/znanje"}>
         <DropdownButton
+          className={styles.filterButton}
           id="dropdown-basic-button"
           title="Filtriraj listu"
-          style={{ zIndex: "1" }}
         >
           <Form style={{ margin: "15px" }}>
             {["checkbox"].map(type => (

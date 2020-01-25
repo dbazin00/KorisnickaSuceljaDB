@@ -47,15 +47,7 @@ const Skolovanje = () => {
       <Layout header={"Školovanje"} activePage={"/školovanje"}>
         <div className={styles.cardGroup}>
           {schoolArray.map(item => (
-            <Card
-              style={{
-                width: "15rem",
-                marginRight: "15px",
-                marginTop: "50px",
-                backgroundColor: "#222222",
-              }}
-              key={item.name}
-            >
+            <Card className={styles.Card1} key={item.name}>
               <Card.Img src={item.picture} height="150px" />
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>

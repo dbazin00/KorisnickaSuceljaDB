@@ -18,19 +18,25 @@ h5 {
 }
 
 .Card1 {
-  background-color: #0000bf;
+  background-color: #000088;
   max-width: 20rem;
   margin: 15px;
   margin-left: 0;
+  transition: background-color ease-in-out 0.5s;
 }
 
 .Card1:hover {
   background-color: #0000ff;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 542px) {
   .Card1 {
     margin-right: 0;
     margin-left: 0;
+  }
+  .cardGroup {
+    width: fit-content;
+    margin: 0 auto;
+    justify-content: center;
   }
 }
