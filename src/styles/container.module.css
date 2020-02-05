@@ -2,7 +2,7 @@
   margin: 50px 15%;
   margin-top: 0;
   background-color: black;
-  padding: 15px;
+  padding-top: 20px;
   min-height: 60vh;
 }
 body {
@@ -14,7 +14,7 @@ body {
   align-items: center;
   margin-left: 15%;
   margin-right: 15%;
-  padding: 15px;
+  padding-bottom: 40px;
   margin-bottom: 0%;
   padding-top: 125px;
 }
